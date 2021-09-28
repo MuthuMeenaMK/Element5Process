@@ -1,0 +1,23 @@
+{
+"URL":"https://login.hchb.com/vpn/index.html",
+"ReportName":"Patient Related Task-Report.xlsx",
+"FolderPath1":"//Client/D$/Users/meena.muthukrishnan/Documents/UiPath/PatientRelatedTask-Demo/",
+"FolderPath2":"D:/Users/meena.muthukrishnan/Documents/UiPath/PatientRelatedTask-Demo/",
+"AssetName":"HCHBApps",
+"CategoryName":"Training",
+"ApplicationName":"HCHB R2 - LHC TRAINING",
+"ManagerRole":"Clinical Manager",
+"ConsoleName":"Workflow Console",
+"TaskName":"Patient Related Tasks",
+"ServiceLines":"HOSPICE",
+"Events":"HOSPICE REFERRAL/INTAKE",
+"OrchestratorFolderName":"Task1",
+"QueueName":"Patient Related Task Report",
+"FromAddress":"meena.muthukrishnan@e5.ai",
+"MailTempPwd":"afsqtsecyhqtdjer",
+"ToAddress":"meena.muthukrishnan@e5.ai",
+"Subject":"Status - Patient Related Task",
+"Body":"Patient Related Task-Report uploaded successfully",
+"FailureSubject":"Failure",
+"FailureBody":"Patient Related Task-Report failed"
+}
