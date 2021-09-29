@@ -1,0 +1,405 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727,779" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="clr-namespace:Patient_Related_Tasks_Library;assembly=Patient Related Tasks Library" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="55">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>Patient_Related_Tasks_Library</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="43">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>Patient Related Tasks Library</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="476,714" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="FailureBody" />
+      <Variable x:TypeArguments="x:String" Name="ErrorSubject" />
+      <Variable x:TypeArguments="x:String" Name="MailTempPwd" />
+      <Variable x:TypeArguments="x:String" Name="ToAddress" />
+      <Variable x:TypeArguments="x:String" Name="FromAddress" />
+      <Variable x:TypeArguments="x:String" Name="Body" />
+      <Variable x:TypeArguments="x:String" Name="Subject" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,622" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="Patient Related tasks" sap:VirtualizedContainerService.HintSize="480,1972" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="njl:JObject" Name="ConfigData" />
+            <Variable x:TypeArguments="x:String" Name="UserName" />
+            <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+            <Variable x:TypeArguments="x:Boolean" Name="LoginPage" />
+            <Variable x:TypeArguments="x:Boolean" Name="CitrixHomePage" />
+            <Variable x:TypeArguments="x:Boolean" Name="CitrixMainPage" />
+            <Variable x:TypeArguments="ui:Browser" Name="HCHBMainPage" />
+            <Variable x:TypeArguments="ui:Browser" Name="HCHBWebPage" />
+            <Variable x:TypeArguments="x:Boolean" Name="ConsoleIcon" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="ConsoleIconRegion" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="TaskRegion" />
+            <Variable x:TypeArguments="x:Boolean" Name="TaskElement" />
+            <Variable x:TypeArguments="x:Boolean" Name="FilterPage" />
+            <Variable x:TypeArguments="x:Boolean" Name="LoadButton" />
+            <Variable x:TypeArguments="x:Boolean" Name="ExportElement" />
+            <Variable x:TypeArguments="x:Boolean" Name="SavePage" />
+            <Variable x:TypeArguments="x:Boolean" Name="TaskPage" />
+            <Variable x:TypeArguments="x:String" Name="URL" />
+            <Variable x:TypeArguments="x:String" Name="ReportName" />
+            <Variable x:TypeArguments="x:String" Name="FolderPath" />
+            <Variable x:TypeArguments="x:String" Name="AssetName" />
+            <Variable x:TypeArguments="x:String" Name="CategoryName" />
+            <Variable x:TypeArguments="x:String" Name="OrchestratorFolderName" />
+            <Variable x:TypeArguments="x:String" Name="ApplicationName" />
+            <Variable x:TypeArguments="x:String" Name="TaskName" />
+            <Variable x:TypeArguments="x:String" Name="ConsoleName" />
+            <Variable x:TypeArguments="x:String" Name="ManagerRole" />
+            <Variable x:TypeArguments="x:String" Name="ServiceLines" />
+            <Variable x:TypeArguments="x:String" Name="Events" />
+            <Variable x:TypeArguments="x:String" Name="QueueName" />
+            <Variable x:TypeArguments="ui:Browser" Name="ApplicationIconPage" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="ConsoleRegion" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="EventRegion" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="ServiceLineRegion" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="LoadButtonRegion" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="ExportButtonRegion" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="RegionFileName" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="RegionCloseButton" />
+            <Variable x:TypeArguments="sd:Rectangle" Name="RegionHCHBIcon" />
+            <Variable x:TypeArguments="ui:UiElement" Name="LogOutElement" />
+            <Variable x:TypeArguments="x:String" Name="FolderPath2" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="LogMessage_23" Level="Info" Message="[&quot;Process - Patient Related Tasks Started&quot;]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:LogMessage>
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,339" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch.Try>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitializeSettings workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="InitializeSettings.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <OutArgument x:TypeArguments="njl:JObject" x:Key="jObj_configData">[ConfigData]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="URL">[URL]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ReportName">[ReportName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="AssetName">[AssetName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="CategoryName">[CategoryName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ApplicationName">[ApplicationName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ManagerRole">[ManagerRole]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ConsoleName">[ConsoleName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="TaskName">[TaskName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ServiceLines">[ServiceLines]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="Events">[Events]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="QueueName">[QueueName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="FromAddress">[FromAddress]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="Body">[Body]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="Subject">[Subject]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ToAddress">[ToAddress]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="MailTempPwd">[MailTempPwd]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="OrchestratorFolderName">[OrchestratorFolderName]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="FolderPath1">[FolderPath]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="FolderPath2">[FolderPath2]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="ErrorSubject">[ErrorSubject]</OutArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="FailureBody">[FailureBody]</OutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </TryCatch.Try>
+            <TryCatch.Catches>
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ActivityAction x:TypeArguments="s:Exception">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                  </ActivityAction.Argument>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[exception.Message]" />
+                </ActivityAction>
+              </Catch>
+            </TryCatch.Catches>
+          </TryCatch>
+          <p:Get_Username_Password AssetName="[AssetName]" DisplayName="Get Username Password" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="Get_Username_Password_1" OrchestratorFolderPath="[OrchestratorFolderName]" Password="[Password]" Username="[UserName]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:Get_Username_Password>
+          <p:Launch HCHBWebPage="[HCHBWebPage]" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="Launch_1" URL="[URL]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:Launch>
+          <p:Login HCHBMainPage="[HCHBMainPage]" HCHBWebPage="[HCHBWebPage]" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="Login_1" Password="[Password]" Username="[UserName]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:Login>
+          <p:SelectingCategory ApplicationIconPage="[ApplicationIconPage]" ApplicationName="[ApplicationName]" FolderName="[CategoryName]" HCHBMainPage="[HCHBMainPage]" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="SelectingCategory_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:SelectingCategory>
+          <p:OpenCitrixApplication ApplicationIconPage="[ApplicationIconPage]" ApplicationName="[ApplicationName]" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="OpenCitrixApplication_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:OpenCitrixApplication>
+          <p:ManagerRoleSelection sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="ManagerRoleSelection_1" ManagerRole="[ManagerRole]" RegionConsoleIcon="[ConsoleRegion]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:ManagerRoleSelection>
+          <p:ClickConsole sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="ClickConsole_1" RegionConsoleIcon="[ConsoleRegion]" TaskName="[TaskName]" TaskRegion="[TaskRegion]">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:ClickConsole>
+          <p:TaskSelection FilterEventRegion="[EventRegion]" FilterServiceLineRegion="[ServiceLineRegion]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="TaskSelection_1" TaskElementRegion="[TaskRegion]" />
+          <p:Apply_Filter DisplayName="Apply Filter" EventFilterName="[Events]" FilterEventRegion="[EventRegion]" FilterServiceLineRegion="[ServiceLineRegion]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Apply_Filter_1" RegionLoadButton="[LoadButtonRegion]" ServiceLineFilterName="[ServiceLines]" />
+          <p:ClickLoadButton sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="ClickLoadButton_1" RegionExportButton="[ExportButtonRegion]" RegionLoadButton="[LoadButtonRegion]" />
+          <p:ExportData sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="ExportData_1" RegionExportData="[ExportButtonRegion]" RegionFilename="[RegionFileName]" />
+          <p:SaveReport Filename="[ReportName]" FolderPath="[FolderPath]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="SaveReport_2" RegionClosingTaskScreen="[RegionCloseButton]" RegionFilename="[RegionFileName]" />
+          <p:AddingDataintoQueue FileName="[ReportName]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="AddingDataintoQueue_1" OrchestratorFolderPath="[OrchestratorFolderName]" QueueName="[QueueName]" ReportPath="[FolderPath2]" />
+          <p:DeletingFile DisplayName="DeletingFile" FileName="[ReportName]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="DeletingFile_1" ReportPath="[FolderPath2]" />
+          <p:ClosingTaskScreen sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="ClosingTaskScreen_2" RegionCloseButton="[RegionCloseButton]" RegionHCHBIcon="[RegionHCHBIcon]" />
+          <p:ClosingCitrix ElementLogout="[LogOutElement]" HCHBMainPage="[HCHBMainPage]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="ClosingCitrix_1" />
+          <p:Logout HCHBMainPage="[HCHBMainPage]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Logout_1" LogoutElement="[LogOutElement]" />
+          <p:SendStatusEmail Body="[body]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_1" Password="[MailTempPwd]" Subject="[Subject]" ToAddress="[ToAddress]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,91" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;Process - Patient Related Tasks Completed&quot;]" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,438" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,369" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[exception.Message]" />
+              <p:ClosingCitrix ElementLogout="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClosingCitrix_2">
+                <p:ClosingCitrix.HCHBMainPage>
+                  <InArgument x:TypeArguments="ui:Browser" />
+                </p:ClosingCitrix.HCHBMainPage>
+              </p:ClosingCitrix>
+              <p:Logout LogoutElement="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Logout_2">
+                <p:Logout.HCHBMainPage>
+                  <InArgument x:TypeArguments="ui:Browser" />
+                </p:Logout.HCHBMainPage>
+              </p:Logout>
+              <p:SendStatusEmail Body="[FailureBody]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_2" Password="[MailTempPwd]" Subject="[ErrorSubject]" ToAddress="[ToAddress]" />
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:SystemException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:SystemException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="571,619" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529,91" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Error" Message="[exception.Message]" />
+              <If Condition="[exception.Message.Contains(&quot;No open windows found for 'wfica32.exe'. Please check if the application is running.&quot;)]" sap:VirtualizedContainerService.HintSize="529,396" sap2010:WorkflowViewState.IdRef="If_1">
+                <If.Then>
+                  <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:Logout LogoutElement="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Logout_3">
+                      <p:Logout.HCHBMainPage>
+                        <InArgument x:TypeArguments="ui:Browser" />
+                      </p:Logout.HCHBMainPage>
+                    </p:Logout>
+                    <p:SendStatusEmail Body="[FailureBody]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_3" Password="[MailTempPwd]" Subject="[ErrorSubject]" ToAddress="[ToAddress]" />
+                  </Sequence>
+                </If.Then>
+                <If.Else>
+                  <Sequence sap:VirtualizedContainerService.HintSize="242,238" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <p:ClosingCitrix ElementLogout="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="ClosingCitrix_3">
+                      <p:ClosingCitrix.HCHBMainPage>
+                        <InArgument x:TypeArguments="ui:Browser" />
+                      </p:ClosingCitrix.HCHBMainPage>
+                    </p:ClosingCitrix>
+                    <p:Logout LogoutElement="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Logout_4">
+                      <p:Logout.HCHBMainPage>
+                        <InArgument x:TypeArguments="ui:Browser" />
+                      </p:Logout.HCHBMainPage>
+                    </p:Logout>
+                    <p:SendStatusEmail Body="[FailureBody]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_4" Password="[MailTempPwd]" Subject="[ErrorSubject]" ToAddress="[ToAddress]" />
+                  </Sequence>
+                </If.Else>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>
