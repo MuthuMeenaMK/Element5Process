@@ -14,7 +14,7 @@
 "OrchestratorFolderName":"Task1",
 "QueueName":"Patient Related Task Report",
 "FromAddress":"meena.muthukrishnan@e5.ai",
-"MailTempPwd":"afsqtsecyhqtdjer",
+"MailTempPwd":"",
 "ToAddress":"meena.muthukrishnan@e5.ai",
 "Subject":"Status - Patient Related Task",
 "Body":"Patient Related Task-Report uploaded successfully",
