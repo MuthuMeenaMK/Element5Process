@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727,779" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="clr-namespace:Patient_Related_Tasks_Library;assembly=Patient Related Tasks Library" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727,2378" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="clr-namespace:Patient_Related_Tasks_Library;assembly=Patient Related Tasks Library" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="55">
+    <scg:List x:TypeArguments="x:String" Capacity="56">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -56,6 +56,7 @@
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>UiPath.OmniPage.Activities</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -102,9 +103,10 @@
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OmniPage.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Interop</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="476,714" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence sap:VirtualizedContainerService.HintSize="560,2313" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="FailureBody" />
       <Variable x:TypeArguments="x:String" Name="ErrorSubject" />
@@ -113,13 +115,17 @@
       <Variable x:TypeArguments="x:String" Name="FromAddress" />
       <Variable x:TypeArguments="x:String" Name="Body" />
       <Variable x:TypeArguments="x:String" Name="Subject" />
+      <Variable x:TypeArguments="x:String" Name="UserName" />
+      <Variable x:TypeArguments="ui:Browser" Name="HCHBMainPage" />
+      <Variable x:TypeArguments="ui:Browser" Name="HCHBWebPage" />
+      <Variable x:TypeArguments="ui:Browser" Name="CitrixAppPage" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="434,622" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="518,2221" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -130,13 +136,10 @@
         <Sequence DisplayName="Patient Related tasks" sap:VirtualizedContainerService.HintSize="480,1972" sap2010:WorkflowViewState.IdRef="Sequence_1">
           <Sequence.Variables>
             <Variable x:TypeArguments="njl:JObject" Name="ConfigData" />
-            <Variable x:TypeArguments="x:String" Name="UserName" />
             <Variable x:TypeArguments="ss:SecureString" Name="Password" />
             <Variable x:TypeArguments="x:Boolean" Name="LoginPage" />
             <Variable x:TypeArguments="x:Boolean" Name="CitrixHomePage" />
             <Variable x:TypeArguments="x:Boolean" Name="CitrixMainPage" />
-            <Variable x:TypeArguments="ui:Browser" Name="HCHBMainPage" />
-            <Variable x:TypeArguments="ui:Browser" Name="HCHBWebPage" />
             <Variable x:TypeArguments="x:Boolean" Name="ConsoleIcon" />
             <Variable x:TypeArguments="sd:Rectangle" Name="ConsoleIconRegion" />
             <Variable x:TypeArguments="sd:Rectangle" Name="TaskRegion" />
@@ -269,7 +272,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </p:SelectingCategory>
-          <p:OpenCitrixApplication ApplicationIconPage="[ApplicationIconPage]" ApplicationName="[ApplicationName]" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="OpenCitrixApplication_1">
+          <p:OpenCitrixApplication ApplicationIconPage="[ApplicationIconPage]" ApplicationName="[ApplicationName]" CitrixAppPage="[CitrixAppPage]" sap:VirtualizedContainerService.HintSize="438,51" sap2010:WorkflowViewState.IdRef="OpenCitrixApplication_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -302,16 +305,16 @@
           <p:DeletingFile DisplayName="DeletingFile" FileName="[ReportName]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="DeletingFile_1" ReportPath="[FolderPath2]" />
           <p:ClosingTaskScreen sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="ClosingTaskScreen_2" RegionCloseButton="[RegionCloseButton]" RegionHCHBIcon="[RegionHCHBIcon]" />
           <p:ClosingCitrix ElementLogout="[LogOutElement]" HCHBMainPage="[HCHBMainPage]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="ClosingCitrix_1" />
-          <p:Logout HCHBMainPage="[HCHBMainPage]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Logout_1" LogoutElement="[LogOutElement]" />
+          <p:Logout HCHBMainPage="[CitrixAppPage]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="Logout_5" Username="[UserName]" />
           <p:SendStatusEmail Body="[body]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="438,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_1" Password="[MailTempPwd]" Subject="[Subject]" ToAddress="[ToAddress]" />
           <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,91" sap2010:WorkflowViewState.IdRef="LogMessage_24" Level="Info" Message="[&quot;Process - Patient Related Tasks Completed&quot;]" />
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,438" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="484,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -319,28 +322,23 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="376,369" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:Browser" Name="HCHBMainPage" />
+              </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[exception.Message]" />
-              <p:ClosingCitrix ElementLogout="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="ClosingCitrix_2">
-                <p:ClosingCitrix.HCHBMainPage>
-                  <InArgument x:TypeArguments="ui:Browser" />
-                </p:ClosingCitrix.HCHBMainPage>
-              </p:ClosingCitrix>
-              <p:Logout LogoutElement="{x:Null}" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Logout_2">
-                <p:Logout.HCHBMainPage>
-                  <InArgument x:TypeArguments="ui:Browser" />
-                </p:Logout.HCHBMainPage>
-              </p:Logout>
+              <p:Logout HCHBMainPage="[CitrixAppPage]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Logout_6" Username="[UserName]" />
               <p:SendStatusEmail Body="[FailureBody]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_2" Password="[MailTempPwd]" Subject="[ErrorSubject]" ToAddress="[ToAddress]" />
             </Sequence>
           </ActivityAction>
         </Catch>
-        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+        <Catch x:TypeArguments="s:SystemException" sap:VirtualizedContainerService.HintSize="484,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -360,6 +358,12 @@
               </sap:WorkflowViewStateService.ViewState>
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="529,91" sap2010:WorkflowViewState.IdRef="LogMessage_25" Level="Error" Message="[exception.Message]" />
               <If Condition="[exception.Message.Contains(&quot;No open windows found for 'wfica32.exe'. Please check if the application is running.&quot;)]" sap:VirtualizedContainerService.HintSize="529,396" sap2010:WorkflowViewState.IdRef="If_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
                 <If.Then>
                   <Sequence sap:VirtualizedContainerService.HintSize="242,176" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
@@ -367,11 +371,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <p:Logout LogoutElement="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Logout_3">
-                      <p:Logout.HCHBMainPage>
-                        <InArgument x:TypeArguments="ui:Browser" />
-                      </p:Logout.HCHBMainPage>
-                    </p:Logout>
+                    <p:Logout HCHBMainPage="[CitrixAppPage]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Logout_7" Username="[UserName]" />
                     <p:SendStatusEmail Body="[FailureBody]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_3" Password="[MailTempPwd]" Subject="[ErrorSubject]" ToAddress="[ToAddress]" />
                   </Sequence>
                 </If.Then>
@@ -387,11 +387,7 @@
                         <InArgument x:TypeArguments="ui:Browser" />
                       </p:ClosingCitrix.HCHBMainPage>
                     </p:ClosingCitrix>
-                    <p:Logout LogoutElement="{x:Null}" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Logout_4">
-                      <p:Logout.HCHBMainPage>
-                        <InArgument x:TypeArguments="ui:Browser" />
-                      </p:Logout.HCHBMainPage>
-                    </p:Logout>
+                    <p:Logout HCHBMainPage="[CitrixAppPage]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Logout_3" Username="[UserName]" />
                     <p:SendStatusEmail Body="[FailureBody]" FromAddress="[FromAddress]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="SendStatusEmail_4" Password="[MailTempPwd]" Subject="[ErrorSubject]" ToAddress="[ToAddress]" />
                   </Sequence>
                 </If.Else>
@@ -400,6 +396,9 @@
           </ActivityAction>
         </Catch>
       </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:CloseTab Browser="[HCHBWebPage]" DisplayName="Close Tab" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="CloseTab_1" />
+      </TryCatch.Finally>
     </TryCatch>
   </Sequence>
 </Activity>
